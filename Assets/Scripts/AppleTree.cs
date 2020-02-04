@@ -8,7 +8,7 @@ public class AppleTree : MonoBehaviour
     public GameObject applePrefab;
     public float speed = 1f; //spped that tree moves
     public float leftAndRightEdge = 10f; // distnace where tree turns around
-    public float chanceToChangeDirections = 0.02f; //chance tree changes direction
+    public float chanceToChangeDirections = 0.1f; //chance tree changes direction
     public float secondsBetweenAppleDrops = 1f; //rate at which apples will be instantaited
 
     void Start() {

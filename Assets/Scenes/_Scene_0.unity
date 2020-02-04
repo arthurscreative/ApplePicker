@@ -120,6 +120,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &238465126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7029153664796500929, guid: 2be51da7fb0bf5f4686d98090430775e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7029153665341051489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &238465127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238465126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e6714e6d7e3644c984455eac670945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applePrefab: {fileID: 1712325091239156414, guid: 8f5c29acfce65cc4d813710427303d05,
+    type: 3}
+  speed: 10
+  leftAndRightEdge: 20
+  chanceToChangeDirections: 0.02
+  secondsBetweenAppleDrops: 1
 --- !u!1 &390259406
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +155,7 @@ GameObject:
   - component: {fileID: 390259409}
   - component: {fileID: 390259408}
   - component: {fileID: 390259407}
+  - component: {fileID: 390259410}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -203,6 +228,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &390259410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390259406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784aca356d51d2642b3c78fb8fad30f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 5902909822362372922, guid: bc4366fd7a98e3543920408e62815cc0,
+    type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!1 &557638439
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +351,7 @@ PrefabInstance:
     - target: {fileID: 7029153664796500928, guid: 2be51da7fb0bf5f4686d98090430775e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7029153664796500928, guid: 2be51da7fb0bf5f4686d98090430775e,
         type: 3}
