@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class Basket : MonoBehaviour
 {
-  void Update()
+
+    void OnCollisionEnter(Collision coll)
+    {
+        GameObject collidedWith = coll.gameObject;
+        if(collidedWith.tag == "Apple")
+        {
+            Destroy(collidedWith);
+        }
+    }
+    void Update()
     {
         Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
