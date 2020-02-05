@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Basket : MonoBehaviour
 {
-
+    public Text scoreGt;
+    void Start()
+    {
+        GameObject scoreGo = GameObject.Find("ScoreCounter");
+        scoreGt = scoreGo.GetComponent<Text>();
+        scoreGt.text = "0";
+    }
     void OnCollisionEnter(Collision coll)
     {
         GameObject collidedWith = coll.gameObject;
@@ -12,7 +19,12 @@ public class Basket : MonoBehaviour
         {
             Destroy(collidedWith);
         }
+    
+        int score = int.Parse(scoreGt.text);
+        score += 1000;
+        scoreGt.text = score.ToString();
     }
+    
     void Update()
     {
         Vector3 mousePos2D = Input.mousePosition;
@@ -22,7 +34,11 @@ public class Basket : MonoBehaviour
         pos.x = mousePos3D.x;
         this.transform.position = pos;
 
+
     }
+
+  
+
 
 
 }
